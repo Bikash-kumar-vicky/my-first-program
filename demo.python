@@ -1,0 +1,362 @@
+print("welcom")
+a=20
+b=50
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a>b) 
+print(a<b)
+print(a!=b)
+a =float(int(input("enter first number : ")))
+b = int(input("enter second number : "))
+print("sum  =" ,a+b)
+r = float(input("enter radious : "))
+ar=3.14 * r*r
+print("area = ",ar)
+
+print(type(12))
+print(type(12.5))
+print(type(3+2j))
+
+str1 ="this is string. /n two are cerating in a python."
+print =(str1)
+
+str1 ="tnb"
+str2 ="college"
+final_str = "str1 + str2"
+print = (final_str)
+
+roll = "1,2,3,4,6,3,7,9"
+ch = roll[0]
+print(ch)
+
+i =0
+while i < len(roll):
+    print(roll[i])
+    i = i + 1
+
+    #modify list
+roll[3] = newvalue   
+#write a program in python to creat a list and n element and 
+# change the list by multipiy 10 for each even position data
+
+list  = []
+n = int (input("enter no of element : "))
+i = 0
+while(i<n):
+    element = int(input("enter element :"))
+    list.append(element)
+    i = i + 1
+    print("original list : ",list)
+    i = 0
+    while(i<n):
+        if(i%2==0):
+            list[i] = list[i] * 10
+        i = i+1 
+        print("modified list : ",list)
+
+
+
+
+#ment and extract a new list which content or even element or first list
+
+class furit :
+ def __init__(self):
+     print('1')
+class apple :
+    def __init__(self):
+     print('2')
+
+obj = apple()
+
+tuple = {1,2,3,5,6,8,5,9}
+     
+tuple = {1,2,3,5,6,8,5,9}
+
+seq = range (9)
+
+for i in seq:
+   print (i)
+   #LINLEAR SEARCH
+n = int(input("enter the number :"))
+for i in range(1, 11)
+
+
+1
+12
+123
+1234
+12345    
+    
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print(" ")  
+1
+22
+333
+4444
+55555 
+for i in range(1,6):
+    print(str(i) * i)    
+
+print(int(input("enter a number" )))
+i = 1
+while i <= 10:
+   print( 3 *i)
+   i += 1
+
+def calc_sum(a,b):
+    return (a+b)
+
+sum = calc_sum(122,123)
+print(sum)
+ 
+def print_hello ():
+    print("hello")
+
+output = print_hello()
+print(output)
+
+
+#average of three numbers
+def calc_avg(a,b,c,d,e,f):
+    sum = a + b + c + d +e + f
+    avg = sum / 6
+    print(avg)
+    return avg
+    
+calc_avg(30,40,50,60,70,80)
+
+print("tnb college")
+ 
+cities = ["a","aa","qw"]
+hero = ["ewrtgrw","dfergrte","erhgtre"]
+
+def print_len(list):
+    print(len(list))
+
+print_len(cities)
+print_len(hero)
+
+# game
+import random
+# library that we use in order to choose
+# on random words from a list of words
+
+name = input("What is your name? ")
+
+# Here the user is asked to enter the name first
+
+print("Good Luck ! ", name)
+
+words = ['rainbow', 'computer', 'science', 'programming',
+         'python', 'mathematics', 'player', 'condition',
+         'reverse', 'water', 'board', 'geeks']
+
+# Function will choose one random
+# word from this list of words
+word = random.choice(words)
+
+
+print("Guess the characters")
+
+guesses = ''
+
+# any number of turns can be used here
+turns = 12
+
+
+while turns > 0:
+
+    # counts the number of times a user fails
+    failed = 0
+
+    # all characters from the input
+    # word taking one at a time.
+    for char in word:
+
+        # comparing that character with
+        # the character in guesses
+        if char in guesses:
+            print(char, end=" ")
+
+        else:
+            print("_")
+
+            # for every failure 1 will be
+            # incremented in failure
+            failed += 1
+
+    if failed == 0:
+        # user will win the game if failure is 0
+        # and 'You Win' will be given as output
+        print("You Win")
+
+        # this print the correct word
+        print("The word is: ", word)
+        break
+
+    # if user has input the wrong alphabet then
+    # it will ask user to enter another alphabet
+    print()
+    guess = input("guess a character:")
+
+    # every input character will be stored in guesses
+    guesses += guess
+
+    # check input with the character in word
+    if guess not in word:
+
+        turns -= 1
+
+        # if the character doesn’t match the word
+        # then “Wrong” will be given as output
+        print("Wrong")
+
+        # this will print the number of
+        # turns left for the user
+        print("You have", + turns, 'more guesses')
+
+        if turns == 0:
+            print("You Loose")
+
+
+first =(input(int("enter in number")))
+second =(input(int("enter in number")))
+
+print ( "sum="first + second)
+
+# Tic-Tac-Toe Program using
+# random number in Python
+
+# importing all necessary libraries
+import numpy as np
+import random
+from time import sleep
+
+# Creates an empty board
+
+
+def create_board():
+	return(np.array([[0, 0, 0],
+					[0, 0, 0],
+					[0, 0, 0]]))
+
+# Check for empty places on board
+
+
+def possibilities(board):
+	l = []
+
+	for i in range(len(board)):
+		for j in range(len(board)):
+
+			if board[i][j] == 0:
+				l.append((i, j))
+	return(l)
+
+# Select a random place for the player
+
+
+def random_place(board, player):
+	selection = possibilities(board)
+	current_loc = random.choice(selection)
+	board[current_loc] = player
+	return(board)
+
+# Checks whether the player has three
+# of their marks in a horizontal row
+
+
+def row_win(board, player):
+	for x in range(len(board)):
+		win = True
+
+		for y in range(len(board)):
+			if board[x, y] != player:
+				win = False
+				continue
+
+		if win == True:
+			return(win)
+	return(win)
+
+# Checks whether the player has three
+# of their marks in a vertical row
+
+
+def col_win(board, player):
+	for x in range(len(board)):
+		win = True
+
+		for y in range(len(board)):
+			if board[y][x] != player:
+				win = False
+				continue
+
+		if win == True:
+			return(win)
+	return(win)
+
+# Checks whether the player has three
+# of their marks in a diagonal row
+
+
+def diag_win(board, player):
+	win = True
+	y = 0
+	for x in range(len(board)):
+		if board[x, x] != player:
+			win = False
+	if win:
+		return win
+	win = True
+	if win:
+		for x in range(len(board)):
+			y = len(board) - 1 - x
+			if board[x, y] != player:
+				win = False
+	return win
+
+# Evaluates whether there is
+# a winner or a tie
+
+
+	return winner
+
+# Main function to start the game
+
+
+def evaluate(board):
+	winner = 0
+
+	for player in [1, 2]:
+		if (row_win(board, player) or
+				col_win(board, player) or
+				diag_win(board, player)):
+
+			winner = player
+
+	if np.all(board != 0)
+def play_game():
+	board, winner, counter = create_board(), 0, 1
+	print(board)
+	sleep(2)
+
+	while winner == 0:
+		for player in [1, 2]:
+			board = random_place(board, player)
+			print("Board after " + str(counter) + " move")
+			print(board)
+			sleep(2)
+			counter += 1
+			winner = evaluate(board)
+			if winner != 0:
+				break
+	return(winner)
+
+    
+# Driver Code
+print("Winner is: " + str(play_game()
